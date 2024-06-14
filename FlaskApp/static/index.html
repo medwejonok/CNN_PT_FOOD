@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стажировка</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/faviconV2.png" type="image/x-icon">
+</head>
+<body>
+    <div id="me">
+        <span id="name">Денис Маликов, 19 лет</span>
+
+        <span id="title">ЗАЯВКА НА СТАЖИРОВКУ</span>
+
+        <br>
+        <div class="task"><span class="n_task">№1</span><span calss="task_text">ML-модель классификации на Pytorch </span><img class="check-square" src="/static/check-square.svg"></div>
+        <div class="task"><span class="n_task">№2</span><span calss="task_text">Создать сервис на Flask/FastAPI* </span><img class="check-square" src="/static/check-square.svg"></div>
+        <div id="plan">
+            <div class="item">
+                <img src="/static/data.svg"  class="icon">
+                <p class="step">Датасет</p>
+                <span class="step_text">Из датасета food101 забрал фотографии пиццы и хот-догов. Создал маленький датасет для теста моделей.</span>
+            </div>
+            <div class="item">
+                <img src="/static/eda.svg"  class="icon">
+                <p class="step">EDA</p>
+                <span class="step_text">Изучил: качество данных, баланс классов, нормализация, визуализация данных</span>
+            </div>
+            <div class="item">
+                <img src="/static/layers.svg"  class="icon">
+                <p class="step">Архитектура</p>
+                <span class="step_text">CNN модель для бинарной классификации, используя слои: Conv2d, MaxPool2d, Flatten и т.д.</span>
+
+            </div>
+            <div class="item">
+                <img src="/static/train.svg" class="icon">
+                <p class="step">Обучение</p>
+                <span class="step_text">Аугментировал датасет в 2 раза до 3000 фотографий. Протестировал несколько архитектур. Обучил модель.</span>
+
+            </div>
+        </div>
+        <span id="metrics_title">Метрики:</span>
+        <dev class="metrics">
+            <span class="metrics_item">Accuracy: 0.77</span>
+            <span class="metrics_item">Recall: 0.74</span>
+            <span class="metrics_item">Precision: 0.79</span>
+            <span class="metrics_item">F1: 0.76</span>
+        </dev>
+    
+    </div>
+    <div id="model">
+        <button id="close">X</button>
+        <div class="drag-area">
+            <header id="dh">Перетащите, чтобы загрузить файл</header>
+            <span id="ds">или</span>
+            <button id="db">Выберите файл</button>
+            <input id="df" type="file" hidden>
+        </div>
+        <div class="response">
+            <span id="response_title">Ответ модели:</span>
+            <br>
+            <br>
+            <br>
+            <img src="/static/pizza.png"  class="food" id="pizza"/>
+            <img src="/static/hot_dog.png" class="food" id="hot_dog"/>
+
+            <span id="response_result">......</span>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>
